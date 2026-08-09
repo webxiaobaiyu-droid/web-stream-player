@@ -1,0 +1,16 @@
+{
+  "host": "0.0.0.0",
+  "port": 8787,
+  "ffmpegPath": "ffmpeg",
+  "idleTimeoutMs": 5000,
+  "maxClientBufferBytes": 4194304,
+  "streams": {
+    "workshop-01": {
+      "label": "Workshop camera 01",
+      "url": "rtsp://viewer:change-me@192.168.1.20:554/live",
+      "rtspTransport": "tcp",
+      "includeAudio": false
+    }
+  }
+}
+

@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@web-stream-player/core": ["packages/core/src/index.ts"],
+      "@web-stream-player/hls": ["packages/hls/src/index.ts"],
+      "@web-stream-player/mpegts": ["packages/mpegts/src/index.ts"],
+      "@web-stream-player/webcodecs": ["packages/webcodecs/src/index.ts"],
+      "web-stream-player": ["packages/player/src/index.ts"]
+    },
+    "declaration": false,
+    "declarationMap": false,
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "rootDir": "."
+  },
+  "include": ["packages/*/src/**/*.ts", "packages/*/src/**/*.tsx"]
+}

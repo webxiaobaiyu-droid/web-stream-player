@@ -1,0 +1,28 @@
+{
+  "name": "@web-stream-player/element",
+  "version": "0.1.0",
+  "description": "Framework-neutral Web Component for Web Stream Player.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": true,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "web-stream-player": "workspace:*"
+  },
+  "license": "MIT",
+  "publishConfig": { "access": "public" }
+}
+

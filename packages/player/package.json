@@ -1,0 +1,30 @@
+{
+  "name": "web-stream-player",
+  "version": "0.1.0",
+  "description": "Adapter-first browser player for RTSP gateways, FLV, MPEG-TS, HLS and raw H.264/H.265.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@web-stream-player/core": "workspace:*",
+    "@web-stream-player/hls": "workspace:*",
+    "@web-stream-player/mpegts": "workspace:*",
+    "@web-stream-player/webcodecs": "workspace:*"
+  },
+  "license": "MIT"
+}
+

@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "../..",
+    "paths": {
+      "@web-stream-player/core": ["packages/core/src/index.ts"],
+      "@web-stream-player/hls": ["packages/hls/src/index.ts"],
+      "@web-stream-player/mpegts": ["packages/mpegts/src/index.ts"],
+      "@web-stream-player/webcodecs": ["packages/webcodecs/src/index.ts"],
+      "web-stream-player": ["packages/player/src/index.ts"]
+    },
+    "types": ["vite/client"],
+    "jsx": "preserve",
+    "declaration": false,
+    "declarationMap": false
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "vite.config.ts"]
+}

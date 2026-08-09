@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a reproducible playback, relay, or integration problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please remove camera credentials, tokens, and private stream URLs before submitting.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Core player
+        - HLS
+        - FLV / MPEG-TS
+        - Raw H.264 / H.265
+        - RTSP relay
+        - Vue
+        - React
+        - Web Component
+        - Playground
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser and version, codec, container, transport, and relevant hardware decode support.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Provide a minimal repository or exact steps using a non-sensitive sample stream.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Paste player events and sanitized relay or browser logs.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed passwords, access tokens, private IP addresses, and sensitive stream URLs.
+          required: true
