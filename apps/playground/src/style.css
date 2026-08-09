@@ -759,6 +759,10 @@ a:focus-visible {
   align-items: start;
 }
 
+.benchmark-results {
+  min-width: 0;
+}
+
 .benchmark-environment {
   padding: 20px;
   border: 1px solid var(--line);
