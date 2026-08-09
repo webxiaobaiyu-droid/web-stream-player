@@ -4,7 +4,7 @@ One browser API for HLS, HTTP/WS-FLV, HTTP/WS MPEG-TS, raw H.264/H.265, and RTSP
 
 [Simplified Chinese](./README.zh-CN.md) | [Contributing](./CONTRIBUTING.md) | [Security](./SECURITY.md)
 
-[Live protocol workbench](https://webxiaobaiyu-droid.github.io/web-stream-player/) | [Measured relay performance](./BENCHMARKS.md)
+[Documentation](https://webxiaobaiyu-droid.github.io/web-stream-player/) | [Live protocol workbench](https://webxiaobaiyu-droid.github.io/web-stream-player/playground/) | [Measured relay performance](./BENCHMARKS.md)
 
 Web Stream Player is an adapter-first TypeScript SDK. Install the complete player for a useful default stack, or compose only the protocol adapters your application needs. The included Vue workbench exposes adapter selection, runtime capabilities, bitrate, frame rate, buffering, dropped frames, screenshots, and player events.
 
@@ -30,6 +30,8 @@ Web Stream Player is an adapter-first TypeScript SDK. Install the complete playe
 H.265 support cannot be inferred from the Chrome version alone. It depends on the operating system codec stack, hardware, browser build, profile, level, and container. Call `detectCapabilities()` and `supportsWebCodec('hevc')` at runtime, and provide H.264 fallback streams for broad deployment.
 
 ## Install
+
+> The source, documentation, and playground are public. The packages have not yet had their first npm release, so the command below becomes available after that release. See the [installation status](https://webxiaobaiyu-droid.github.io/web-stream-player/guide/installation) for the current source workflow.
 
 ```bash
 pnpm add web-stream-player

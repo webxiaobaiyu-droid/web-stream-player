@@ -4,7 +4,7 @@
 
 [English](./README.md) | [贡献指南](./CONTRIBUTING.md) | [安全说明](./SECURITY.md)
 
-[在线协议工作台](https://webxiaobaiyu-droid.github.io/web-stream-player/) | [Relay 实测报告](./BENCHMARKS.md)
+[完整文档](https://webxiaobaiyu-droid.github.io/web-stream-player/) | [在线协议工作台](https://webxiaobaiyu-droid.github.io/web-stream-player/playground/) | [Relay 实测报告](./BENCHMARKS.md)
 
 Web Stream Player 是一个基于 Adapter 的 TypeScript 播放器 SDK。可以直接安装包含常用协议的完整播放器，也可以只组合业务需要的协议包。仓库内置 Vue 调试工作台，可查看 Adapter 选择、浏览器能力、码率、帧率、缓冲、掉帧、截图和播放器事件。
 
@@ -30,6 +30,8 @@ Web Stream Player 是一个基于 Adapter 的 TypeScript 播放器 SDK。可以�
 H.265 能否播放不能只看 Chrome 版本，还取决于操作系统编解码组件、硬件、浏览器构建、编码 profile/level 和封装格式。请在运行时调用 `detectCapabilities()` 和 `supportsWebCodec('hevc')`，面向广泛终端部署时保留 H.264 备选流。
 
 ## 快速开始
+
+> GitHub 源码、文档和 Playground 已公开，npm 包尚未完成首次发布。因此下方命令需要等首个 npm Release 后使用。当前源码运行方式见[安装状态](https://webxiaobaiyu-droid.github.io/web-stream-player/guide/installation)。
 
 ```bash
 pnpm add web-stream-player

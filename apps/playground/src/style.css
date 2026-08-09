@@ -151,6 +151,13 @@ a:focus-visible {
   border-bottom: 1px solid var(--ink);
 }
 
+.topbar-links {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .repo-version {
   font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
   color: var(--muted);
@@ -541,6 +548,41 @@ a:focus-visible {
 
 .spin {
   animation: spin 0.8s linear infinite;
+}
+
+.playground-note {
+  width: min(100% - 36px, 960px);
+  min-height: 76px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 15px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.playground-note > svg {
+  color: var(--data);
+}
+
+.playground-note p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.playground-note a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.playground-note a:hover {
+  color: var(--data);
 }
 
 .site-content {
@@ -1104,6 +1146,21 @@ a:focus-visible {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar-links .repo-link span {
+    display: none;
+  }
+
+  .playground-note {
+    grid-template-columns: auto 1fr;
+    padding: 16px 0;
+  }
+
+  .playground-note a {
+    grid-column: 2;
   }
 }
 

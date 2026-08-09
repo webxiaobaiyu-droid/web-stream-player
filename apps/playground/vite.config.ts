@@ -4,8 +4,14 @@ import vue from '@vitejs/plugin-vue'
 
 const workspaceRoot = resolve(__dirname, '../..')
 
-export default defineConfig({
-  base: process.env.VITE_BASE_PATH ?? '/',
+function productionBase(): string {
+  if (process.env.VITE_PLAYGROUND_BASE_PATH) return process.env.VITE_PLAYGROUND_BASE_PATH
+  const siteBase = process.env.VITE_BASE_PATH ?? '/'
+  return `${siteBase.endsWith('/') ? siteBase : `${siteBase}/`}playground/`
+}
+
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : productionBase(),
   plugins: [vue()],
   resolve: {
     alias: {
@@ -33,4 +39,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))

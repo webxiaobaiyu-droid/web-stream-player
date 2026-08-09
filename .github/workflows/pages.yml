@@ -28,13 +28,15 @@ jobs:
           cache: pnpm
       - uses: actions/configure-pages@v5
       - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
       - run: pnpm build
         env:
           VITE_BASE_PATH: /web-stream-player/
           VITE_REPOSITORY_URL: https://github.com/webxiaobaiyu-droid/web-stream-player
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/playground/dist
+          path: apps/site/.vitepress/dist
 
   deploy:
     environment:
