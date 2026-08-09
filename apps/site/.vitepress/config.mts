@@ -4,6 +4,7 @@ const origin = 'https://webxiaobaiyu-droid.github.io'
 const repository = 'https://github.com/webxiaobaiyu-droid/web-stream-player'
 const socialImage = 'https://raw.githubusercontent.com/webxiaobaiyu-droid/web-stream-player/main/docs/workbench-desktop.jpg'
 const base = normalizeBase(process.env.VITE_BASE_PATH ?? '/')
+const playground = `${origin}${base}playground/`
 
 function normalizeBase(value: string): string {
   const leading = value.startsWith('/') ? value : `/${value}`
@@ -63,7 +64,7 @@ export default defineConfig({
       { text: '部署', link: '/deployment/relay' },
       { text: 'API', link: '/reference/player' },
       { text: '性能', link: '/benchmarks' },
-      { text: 'Playground', link: '/playground/' }
+      { text: 'Playground', link: playground, target: '_blank', rel: 'noreferrer' }
     ],
     sidebar: {
       '/guide/': guideSidebar(),

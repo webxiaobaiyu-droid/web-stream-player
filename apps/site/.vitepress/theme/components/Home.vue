@@ -147,7 +147,12 @@ onBeforeUnmount(() => {
             <span>开始接入</span>
             <ArrowRight :size="17" aria-hidden="true" />
           </a>
-          <a class="wsp-button wsp-button-secondary" :href="withBase('/playground/')">
+          <a
+            class="wsp-button wsp-button-secondary"
+            :href="withBase('/playground/')"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Play :size="16" fill="currentColor" aria-hidden="true" />
             <span>在线调试</span>
           </a>
